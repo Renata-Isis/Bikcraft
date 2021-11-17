@@ -1,0 +1,212 @@
+/*================== Reset ================*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+/*================== Header ================*/
+header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
+
+.menu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-nav li a {
+  border-radius: 4px;
+  padding: 1rem 2rem;
+  margin-right: 10px;
+  text-transform: uppercase;
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #fff; /*Para evitar que os elementos cresçam com a borda*/
+}
+
+.menu-nav li a:hover {
+  border-color: #ee2211;
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  header {
+    gap: 30px;
+  }
+  .menu-nav {
+    width: 200px;
+    gap: 70px;
+  }
+}
+
+/*================== Seção1 ================*/
+.cont-principal {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.intro {
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  justify-items: end;
+  padding: 40px;
+  text-align: right;
+  background: white;
+}
+
+.intro h1 {
+  font-size: 2rem;
+}
+
+.intro::before {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #ee2211;
+  position: absolute;
+  top: 30px;
+  right: 470px;
+}
+
+.intro-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.cont-principal a {
+  background: #ee2211;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.cont-principal a:hover {
+  background: #900;
+}
+
+@media (max-width: 1000px) {
+  .cont-principal {
+    grid-template-columns: 1fr;
+  }
+  .intro {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .intro::before {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro {
+    text-align: center;
+    justify-items: center;
+  }
+  .intro::before {
+    display: none;
+  }
+}
+
+/*================== Seção2 ================*/
+.subtitulo {
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: right;
+  color: #c6c6c6;
+  align-self: center;
+  padding: 40px;
+  background-image: url('img/onda.svg');
+}
+
+.secao-geral {
+  background: #fff;
+  padding: 40px;
+}
+
+.secao-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+}
+
+.secao-item:hover {
+  border-left: 4px solid #ee2211;
+}
+
+.secao-item:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.secao-item p {
+  grid-column: 2; /*Indicando que quero o p na 2º coluna*/
+}
+
+@media (max-width: 1000px) {
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .subtitulo {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/*================== Footer ================*/
+.footer {
+  background: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box;
+}
